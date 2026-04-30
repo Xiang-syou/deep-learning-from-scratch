@@ -1,6 +1,8 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+# 取得目前檔案 (two_layer_net.py) 所在目錄的上一層絕對路徑
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(parent_dir)
 import numpy as np
 from common.layers import *
 from common.gradient import numerical_gradient
